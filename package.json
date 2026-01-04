@@ -1,0 +1,45 @@
+{
+  "name": "links-settings-app",
+  "version": "0.2.1",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build:dev": "npm run clean && node scripts/build.js --mode=development",
+    "build:prod": "npm run clean && node scripts/build.js --mode=production",
+    "serve": "node scripts/serve.js",
+    "package:dev": "node scripts/tfx.js create dev",
+    "publish:dev": "node scripts/tfx.js publish dev",
+    "build:ppe": "npm run build:prod",
+    "package:ppe": "node scripts/tfx.js create ppe",
+    "publish:ppe": "node scripts/tfx.js publish ppe",
+    "package:prod": "node scripts/tfx.js create prod",
+    "publish:prod": "node scripts/tfx.js publish prod",
+    "lint": "eslint \"src/**/*.ts\""
+  },
+  "dependencies": {
+    "azure-devops-extension-api": "^2.0.0",
+    "azure-devops-extension-sdk": "^4.2.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.14.0",
+    "@typescript-eslint/parser": "^8.14.0",
+    "esbuild": "^0.27.2",
+    "eslint": "^9.12.0",
+    "rimraf": "^5.0.5"
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

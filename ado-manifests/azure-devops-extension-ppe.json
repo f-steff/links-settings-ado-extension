@@ -1,0 +1,73 @@
+{
+    "id": "links-settings-hub-ppe",
+    "name": "Header Link Settings (PPE)",
+    "version": "0.2.1",
+    "publisher": "fsteff",
+    "public": false,
+    "contributions": [
+        {
+            "id": "hub",
+            "type": "ms.vss-web.hub",
+            "targets": [
+                "ms.vss-web.collection-admin-hub-group"
+            ],
+            "includes": [
+                "ms.vss-tfs-web.tfs-page-data-service",
+                "ms.vss-features.host-navigation-service",
+                "ms.vss-features.extension-data-service",
+                "ms.vss-features.host-dialog-service"
+            ],
+            "properties": {
+                "name": "Header Links (PPE)",
+                "uri": "dist/index.html",
+                "icon": "asset://static/sample-icon.png"
+            }
+        },
+        {
+            "id": "dynamic-banner-subscription",
+            "type": "ms.vss-web.event-subscription",
+            "targets": [
+                "ms.vss-web.tfs-website"
+            ],
+            "properties": {
+                "eventName": "page-interactive",
+                "command": {
+                    "uri": "dist/dynamic-banner.html",
+                    "serviceName": "DynamicBannerService",
+                    "methodName": "showBanner"
+                }
+            }
+        },
+        {
+            "id": "dynamic-banner-subscription-load",
+            "type": "ms.vss-web.event-subscription",
+            "targets": [
+                "ms.vss-web.tfs-website"
+            ],
+            "properties": {
+                "eventName": "page-load",
+                "command": {
+                    "uri": "dist/dynamic-banner.html",
+                    "serviceName": "DynamicBannerService",
+                    "methodName": "showBanner"
+                }
+            }
+        }
+    ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
