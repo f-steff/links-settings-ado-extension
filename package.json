@@ -1,6 +1,6 @@
 {
   "name": "links-settings-app",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "scripts": {
     "clean": "rimraf ./dist",
     "build:dev": "npm run clean && node scripts/build.js --mode=development",
@@ -27,6 +27,7 @@
     "rimraf": "^5.0.5"
   }
 }
+
 
 
 

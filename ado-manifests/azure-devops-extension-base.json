@@ -30,6 +30,10 @@
             "addressable": true
         },
         {
+            "path": "../SETUP.md",
+            "addressable": true
+        },
+        {
             "path": "../dist",
             "addressable": true
         }
